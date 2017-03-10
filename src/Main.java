@@ -1,18 +1,27 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
 
     public static void main(String[] args) {
+        Random ran = new Random();
 
+        // Create scanner for input
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the name of your character");
         String name = scan.nextLine();
         System.out.println("Enter the type of your character");
         String type = scan.nextLine();
 
-        String AItype = "Flame Mage";
+        // Random number used for array
+        int selection = ran.nextInt(3);
+        // Array to hold types
+        String types[] = {"Wizard", "Flame Mage", "Dodgeball Champ", "Cyclops"};
+        // Give AI a random type
+        String AItype = types[selection];
 
+        // Create player instance
         Character player1 = new Character(name, type);
 
 
@@ -44,5 +53,3 @@ public class Main {
         System.out.println(AI);
     }
 }
-
-
