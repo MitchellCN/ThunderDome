@@ -15,30 +15,80 @@ public class Character {
     double dodgePercent;
 
 
-    public Character(String name, String type) {
+    public Character(String name, String type){
         this.name = name;
         this.type = type;
-        if (type.equals("Cyclops")) {
+        if(type.equals("Cyclops")){
             this.health = 1250;
             this.power = 75;
-            this.dodgePercent = 20.0 / 100.0;
+            this.dodgePercent = 20.0/100.0;
         }
-        if (type.equals("DodgeBall Champ")) {
+        if(type.equals("DodgeBall Champ")){
             this.health = 300;
             this.power = 20;
-            this.dodgePercent = 70.0 / 100.0;
+            this.dodgePercent = 70.0/100.0;
 
         }
-        if (type.equals("Wizard")) {
+        if(type.equals("Wizard")) {
             this.health = 750;
             this.power = 100;
-            this.dodgePercent = 25.0 / 100.0;
+            this.dodgePercent = 25.0/100.0;
         }
-        if (type.equals("Flame Mage")) {
+        if(type.equals("Flame Mage")){
             this.health = 850;
             this.power = 90;
-            this.dodgePercent = 20.0 / 100;
+            this.dodgePercent = 20.0/100;
         }
 
     }
+
+
+
+
+
+
+    public String toString(){
+        String status = "The "+ type+ " "+name+" has " +health+" health and deals "+ power+ " damage on each attack.";
+        return status;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
