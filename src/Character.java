@@ -57,6 +57,20 @@ public class Character {
 
     }
 
+    public boolean setDodge() {
+        Random ran = new Random();
+
+
+        double randomNum = ran.nextDouble();
+        boolean dodge = false;
+
+
+        if (dodgePercent >= randomNum) {
+            dodge = true;
+
+        }
+        return dodge;
+    }
 
 
 
