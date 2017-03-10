@@ -14,7 +14,7 @@ public class Character {
     // create dodgePercent property
     double dodgePercent;
 
-
+    // create a constructor and set value/character types
     public Character(String name, String type){
         this.name = name;
         this.type = type;
@@ -42,6 +42,21 @@ public class Character {
 
     }
 
+    // Create an attack method
+    public void attack(Character character){
+
+        System.out.println(character.name +" attacks " + name);
+        if(setDodge()){
+            health = health;
+            System.out.println(name+" dodged");
+        }
+        else {
+            health = health - character.power;
+        }
+        System.out.println(name+" health is: " + health);
+
+    }
+
 
 
 
@@ -52,43 +67,3 @@ public class Character {
         return status;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
